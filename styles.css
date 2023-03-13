@@ -1,0 +1,53 @@
+.wardrobe {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.card.back {
+  transform: rotateY(180deg);
+}
+
+.selected-item {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.selected-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
