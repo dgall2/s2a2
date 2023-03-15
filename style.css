@@ -1,0 +1,148 @@
+body{
+    padding:0%;
+    margin:0;
+    background-color:rgb(72, 42, 98);
+}
+
+#title {
+    border: 20px solid rgb(95, 55, 119);
+    border-top:20px solid rgb(27, 6, 56);
+    background-color:rgb(59, 20, 83);
+    width:400px;
+    height:50px;
+    margin:auto;
+    margin-top:30px;
+    color:goldenrod;
+    vertical-align:middle;
+    text-align:center;
+    font-size:36;
+    font-family:serif;
+    font-style:italic;
+}
+#author {
+    font-family:sarif;
+    font-style:italic;
+    color:grey;
+    position:absolute;
+    bottom:10px;
+    left:calc(50% - 55px);
+}
+
+.window-flex {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    column-gap:40px;
+    margin-right:160px;
+    margin-left:160px;
+    /* margin-top:400px; */
+
+}
+.window {
+    border: 20px solid rgb(95, 55, 119);
+    border-top:20px solid rgb(27, 6, 56);
+    width:200px;
+    min-width:200px;
+    height:400px;
+    /* margin:auto; */
+    margin-top:calc(50vh - 290px);
+    overflow:hidden;
+}
+
+@keyframes ball {
+    100% {background-position: -1200px; }
+  }
+
+#window1 {
+    background:url('ball.jpg');
+}
+
+#window1:hover{
+    animation: ball 0.8s steps(6) infinite;
+}
+
+#window2 {
+    background:url('plant.jpg');
+}
+@keyframes plant {
+    100% {background-position: -4000px; }
+  }
+
+#window2:hover{
+    animation: plant 2.5s steps(20) infinite;
+}
+
+#window3 {
+    background:url('sui.jpg');
+}
+@keyframes sui {
+    100% {background-position: -1000px; }
+  }
+
+#window3:hover{
+    animation: sui 1.3s steps(5) infinite;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #window3 {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    #window2 {
+      display: none;
+    }
+  }
+
+.torch{
+    height:240px;
+    width:120px;
+    border: 20px solid rgb(95, 55, 119);
+    border-top:20px solid rgb(196, 143, 208);
+    border-right:20px solid rgb(143, 102, 172);
+    border-left:20px solid rgb(143, 102, 172);
+    overflow:hidden;
+    background-color:rgb(68, 29, 88);
+}
+@keyframes fire {
+    100% {background-position: -600px; }
+  }
+.torch {
+    background:url('torch.jpg');
+}
+.torch{
+    animation: fire 0.8s steps(5) infinite;
+}
+.torch img {
+    width:95%
+    height:95%
+}
+
+#torch1{
+    position:absolute;
+    left:25px;
+    top:20px;
+}
+#torch2{
+    position:absolute;
+    right:25px;
+    top:20px;
+}
+
+@media screen and (max-width: 800px) {
+    #torch1 {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    #torch2 {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    body {
+      background-color:rgb(29, 19, 37);
+    }
+  }
